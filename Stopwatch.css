@@ -1,0 +1,189 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.timerDisplay
+{
+    color: #00ffff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle
+{
+    height: 250px;
+    width: 250px;
+    margin-top: 50px;
+    background-color: #00ffff;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.innercircle
+{
+    height: 242px;
+    width: 242px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg
+{
+    animation: shine 1.6s ease infinite;
+}
+@keyframes shine
+{
+    0%,100%
+    {
+        border-color: #00ffff;
+        box-shadow: 0px 0px 55px -17px #00ffff,
+                    0px 25px 55px -17px #00ffff,
+                    0px 75x 55px -17px #00ffff,
+                    0px 100px 55px -17px #00ffff;
+        color: #00ffff;
+    }
+    50%
+    {
+        border-color: #00ffff;
+        box-shadow: 0px 0px 55px -5px #00ffff;
+        color: #00ffff;
+    }
+}
+.buttonswrapper
+{ 
+    height: 30px;
+    width: 70px;
+    position: absolute;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap:50px;
+}
+.buttons
+{
+    height: 40px;
+    width: 90px;
+    border-radius: 20px;
+    margin-top: 340px;
+    background-color: black;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    cursor:pointer;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.buttons:hover
+{
+    border-color: #00ffff;
+    box-shadow: 0px 4px 37px -7px #00ffff;
+    color: #00ffff;
+}
+.laps
+{
+    height: 280px;
+    width: 350px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    list-style:none;
+    overflow: auto;
+    margin-top: 425px;
+}
+.laps::-webkit-scrollbar
+{
+    width: 6px;
+}
+.laps::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(#13e6e6, #2acaca,#367e7e, #1e4747);
+    border-radius: 5px;
+}
+.lap-items
+{
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    width: 290px;
+    padding: 10px;
+    border: 1px solid #00ffff38;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+.number
+{
+    color: #1ac2c2;
+}
+.timerlap
+{
+    display: inline-block;
+    color: #1ac2c2;
+}
+.timerlap1
+{
+    display: inline-block;
+    color: #1ac2c2;
+}
+.lapclear
+{
+    display: block;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 67px;
+    height: 35px;
+    width: 100px;
+    padding: 10px 0;
+    border-radius: 50px;
+    border: 1px solid #00ffff;
+    background-color: #00ffff9c;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    transition: all 0.9s ease;
+}
+.lapclear:active
+{
+    transform: scale(0.7);
+}
+.lapclear:hover
+{
+    border-color: #00ffff;
+    box-shadow: 0px 4px 37px -7px #00ffff;
+    color: #00ffff;
+}
+.hidden
+{
+    visibility: hidden;
+}
+.author
+{
+    color: #00ffff;
+    font-size: small;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    opacity: 75%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
